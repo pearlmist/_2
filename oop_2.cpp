@@ -1,15 +1,16 @@
-﻿#include <iostream>
+﻿#define _USE_MATH_DEFINES
+#include <iostream>
 #include <cmath>
 
 const double pi = 3.1415;
 
 double function(double x, double y)
 {
-    if ((y > pi) && (x < pi)) {
+    if ((y > M_PI) && (x < M_PI)) {
         return cos(0.3 * x);
     }
     else {
-        if ((y <= pi) && (y != x)) {
+        if ((y <= M_PI) && (y != x)) {
             return exp(-pow(y,2));
         }
         else {
